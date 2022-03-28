@@ -1,0 +1,140 @@
+header {
+    background-color: lightblue;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+* {
+    margin: 0;
+    font-family: "Comic Sans MS";
+}
+
+html {
+    background-color: darkcyan;
+}
+
+.store-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+    justify-content: center;
+}
+
+.store:hover {
+    cursor: pointer;
+}
+
+.store header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: unset;
+}
+
+.store {
+    text-align: center;
+    background-color: lightblue;
+    max-height: 247px;
+    height: fit-content;
+    border-radius: 10px;
+    transition-duration: 300ms;
+}
+
+.store img {
+    width: 300px;
+    height: complex;
+    max-width: 98%;
+    max-height: inherit;
+    border-radius: 10px;
+}
+
+/* From here all Sidenav*/
+
+.menuX {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
+.sideNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 101;
+    background: lightblue;
+    width: 400px;
+    height: 100vh;
+    overflow: hidden;
+    color: black; /* hide the menu above the screen by default */
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    max-width: 100vw;
+    border-radius: 0 10px 10px 0;
+    overflow-y: auto;
+}
+
+.showNav {
+    transform: translateX(0);
+}
+
+.sideNav #details {
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.sideNav ul {
+    padding-left: 0;
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+
+#paddingTag {
+    padding-top: 30px;
+}
+
+#favoriteButton {
+    transition-duration: 300ms;
+}
+
+#favoriteButton:hover {
+    cursor: pointer;
+    background-color: yellow;
+    transition-duration: 300ms;
+}
+
+.active {
+    background-color: yellow;
+    transition-duration: 300ms;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100vh;
+}
+
+.showOverlay {
+    display: block;
+}
+
+@media screen and (max-width: 540px) {
+    .sideNav {
+        width: 100vw;
+    }
+}
